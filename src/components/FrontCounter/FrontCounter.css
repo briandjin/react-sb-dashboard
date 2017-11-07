@@ -1,0 +1,46 @@
+.front-counter-container {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.front-counter-icon-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.fa-user-o {
+  display: flex;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.fa-check-circle-o {
+  color: green;
+}
+
+.front-counter-title {
+  display: flex;
+  align-self: center;
+}
+.front-counter-images-container {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+}
+
+.front-counter-images {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /*margin-left: 2%;*/
+}
+
+.status-icon {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}

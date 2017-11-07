@@ -1,0 +1,41 @@
+.ddt-container {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.ddt-icon-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.ddt-title {
+  display: flex;
+  align-self: center;
+}
+
+.ddt-images-container {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+}
+
+.ddt-images {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.fa-car {
+  display: flex;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.status-icon {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}

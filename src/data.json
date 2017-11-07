@@ -1,0 +1,1968 @@
+[
+	{
+		"id": "3",
+		"code": "03381-171",
+		"ip": "10.205.20.171",
+		"vpn_ip": "10.20.0.94",
+		"stamp": "2017-11-02T19:48:04.116Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "46887044-8874-11e7-864e-138d6ba84496",
+				"MAC Address": "f4:4d:30:6f:23:c3",
+				"Hostname": "03381-171",
+				"IP": "10.205.20.171",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.94",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:11.492-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:11.496Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "SYSKLi35.86A.0039.2016.0316.1747",
+				"config.disable-kiosk-mode": "OFF",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"input.enabled": "1",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"screen.input.HDMI1": "DVI",
+				"screen.model.HDMI1": "samsung",
+				"screen.power_status.HDMI1": "ON",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [],
+			"systemStatus": {
+				"Temperature": "47 c",
+				"CPU Usage": "3 %",
+				"Disk Usage": "13%",
+				"Memory Usage": "2 %",
+				"DB Records": "1626",
+				"DB Size": "79.69 MB",
+				"Log Size": "9.31 GB",
+				"Content Size": "981.97 MB",
+				"Ping": "16ms",
+				"Uptime": "44 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "XMz.",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.30GHz", "Disk Size": "106G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "5", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "6",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Romeoville Front Counter / Set 1 / Screen 1",
+					"Schedule": "30-08-17 Weekday (2017-08-30 01:30:00)",
+					"Content": "Lunch-EDV-HM-Treats-V2.zip (10:30:00-16:00:00) Playing",
+					"Datasources":
+						"Lunch-EDV-HM-Treats-V2-Options.csv, mcd-pos6.xml.csv, nutrition_db.csv, promo-playlist.csv, content-Settings.csv",
+					"Screen Config": "HDMI1 / 10.205.20.176 / SAMSUNG",
+					"Screen Status": "DVI / ON / samsung",
+					"Orientation": "normal"
+				},
+				{
+					"Id": "7",
+					"Name": "HDMI2",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Romeoville Front Counter / Set 2 / Screen 2",
+					"Schedule": "30-08-17 Weekday (2017-08-30 01:30:00)",
+					"Content": "Lunch-LTO-Playlist.zip (10:30:00-16:00:00) Not Playing",
+					"Datasources": "mcd-pos6.xml.csv, Lunch-LTO-Playlist.csv",
+					"Screen Config": "HDMI2 / 10.205.20.177 / SAMSUNG",
+					"Screen Status": "N/A",
+					"Orientation": "normal",
+					"Backs up": "03381-172"
+				}
+			],
+			"windows": {
+				"0x00c0003c": {
+					"id": "0x00c0003c",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-171 82a26be176ac1d84fa6bac7d801eb9d7 - Lunch-EDV-HM-Treats-V2.zip - Chromium",
+					"hash": "82a26be176ac1d84fa6bac7d801eb9d7",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "941",
+						"mm_height": "529",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c0003c ACTIVE HDMI1 03381-171 82a26be176ac1d84fa6bac7d801eb9d7 - Lunch-EDV-HM-Treats-V2.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "6",
+		"code": "03381-174",
+		"ip": "10.205.20.174",
+		"vpn_ip": "10.20.0.106",
+		"stamp": "2017-11-02T19:48:05.298Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "3c19061c-8880-11e7-992e-af90c3b5ade9",
+				"MAC Address": "f4:4d:30:6e:d3:b2",
+				"Hostname": "03381-174",
+				"IP": "10.205.20.174",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.106",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:14.054-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:14.057Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "SYSKLi35.86A.0039.2016.0316.1747",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"screen.input.HDMI1": "DVI",
+				"screen.model.HDMI1": "samsung",
+				"screen.model.HDMI2": "samsung",
+				"screen.power_status.HDMI1": "ON",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [],
+			"systemStatus": {
+				"Temperature": "41 c",
+				"CPU Usage": "5 %",
+				"Disk Usage": "18%",
+				"Memory Usage": "3 %",
+				"DB Records": "1602",
+				"DB Size": "79.69 MB",
+				"Log Size": "14.98 GB",
+				"Content Size": "962.98 MB",
+				"Ping": "20ms",
+				"Uptime": "47 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "CKS/",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.30GHz", "Disk Size": "106G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "14", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "15",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Romeoville Front Counter / Set 1 / Screen 4",
+					"Schedule": "30-08-17 Weekday (2017-08-30 01:30:00)",
+					"Content": "Lunch-EVM-ADB.zip (10:30:00-16:00:00) Playing",
+					"Datasources":
+						"nutrition_db.csv, Lunch-EVM-ADB-Options.csv, mcd-pos6.xml.csv, promo-playlist.csv, content-Settings.csv",
+					"Screen Config": "HDMI1 / 10.205.20.179 / SAMSUNG",
+					"Screen Status": "DVI / ON / samsung",
+					"Orientation": "normal"
+				},
+				{
+					"Id": "16",
+					"Name": "HDMI2",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Romeoville Front Counter / Set 2 / Screen 5",
+					"Schedule": "30-08-17 Weekday (2017-08-30 01:30:00)",
+					"Content": "Lunch-Crafted-McCafe-V2.zip (10:30:00-16:00:00) Not Playing",
+					"Datasources":
+						"nutrition_db.csv, mcd-pos6.xml.csv, BF-Crafted-McCafe-V2-Options.csv, content-Settings.csv, promo-playlist.csv",
+					"Screen Config": "HDMI2 / 10.205.20.180 / SAMSUNG",
+					"Screen Status": "N/A",
+					"Orientation": "normal",
+					"Backs up": "03381-175"
+				}
+			],
+			"windows": {
+				"0x00c0003c": {
+					"id": "0x00c0003c",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-174 f02ebfeb5b486cd14d57ff26b6ebb701 - Lunch-EVM-ADB.zip - Chromium",
+					"hash": "f02ebfeb5b486cd14d57ff26b6ebb701",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "941",
+						"mm_height": "529",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c0003c ACTIVE HDMI1 03381-174 f02ebfeb5b486cd14d57ff26b6ebb701 - Lunch-EVM-ADB.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "7",
+		"code": "03381-175",
+		"ip": "10.205.20.175",
+		"vpn_ip": "10.20.0.114",
+		"stamp": "2017-11-02T19:48:05.232Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "6ca67a64-892d-11e7-b12a-67c5b00fc38c",
+				"MAC Address": "f4:4d:30:6e:d8:03",
+				"Hostname": "03381-175",
+				"IP": "10.205.20.175",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.114",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:17.813-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:17.817Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "SYSKLi35.86A.0039.2016.0316.1747",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"screen.input.HDMI1": "DVI",
+				"screen.model.HDMI1": "samsung",
+				"screen.power_status.HDMI1": "ON",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [
+				{ "code": "info.status", "stamp": "2017-11-01T15:01:11.219Z", "description": "Ok." },
+				{
+					"code": "error.play",
+					"stamp": "2017-11-01T14:58:11.891Z",
+					"description":
+						"Unable to play scheduled content! (    HDMI1 needs to play 7b4190b1299eee65ffaca6e366ec9361 - BF-Crafted-McCafe-V2.zip,     need to close window 0x00c00001 ACTIVE HDMI1 03381-175 8021926b0c31bcf781014f18431f0caa - BF-Crafted-McCafe-V2.zip - Chromium, )"
+				}
+			],
+			"systemStatus": {
+				"Temperature": "48 c",
+				"CPU Usage": "10 %",
+				"Disk Usage": "18%",
+				"Memory Usage": "3 %",
+				"DB Records": "1608",
+				"DB Size": "79.69 MB",
+				"Log Size": "14.78 GB",
+				"Content Size": "972.49 MB",
+				"Ping": "15ms",
+				"Uptime": "47 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "g.H/",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.30GHz", "Disk Size": "106G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "17", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "18",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Romeoville Front Counter / Set 1 / Screen 5",
+					"Schedule": "30-08-17 Weekday (2017-08-30 01:30:00)",
+					"Content": "Lunch-Crafted-McCafe-V2.zip (10:30:00-16:00:00) Playing",
+					"Datasources":
+						"nutrition_db.csv, mcd-pos6.xml.csv, BF-Crafted-McCafe-V2-Options.csv, content-Settings.csv, promo-playlist.csv",
+					"Screen Config": "HDMI1 / 10.205.20.180 / SAMSUNG",
+					"Screen Status": "DVI / ON / samsung",
+					"Orientation": "normal"
+				},
+				{
+					"Id": "19",
+					"Name": "HDMI2",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Romeoville Front Counter / Set 2 / Screen 1",
+					"Schedule": "30-08-17 Weekday (2017-08-30 01:30:00)",
+					"Content": "Lunch-EDV-HM-Treats-V2.zip (10:30:00-16:00:00) Not Playing",
+					"Datasources":
+						"Lunch-EDV-HM-Treats-V2-Options.csv, mcd-pos6.xml.csv, nutrition_db.csv, promo-playlist.csv, content-Settings.csv",
+					"Screen Config": "HDMI2 / 10.205.20.176 / SAMSUNG",
+					"Screen Status": "N/A",
+					"Orientation": "normal",
+					"Backs up": "03381-171"
+				}
+			],
+			"windows": {
+				"0x00c0003c": {
+					"id": "0x00c0003c",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-175 628fcb080a6ec4686f7144041a737cf0 - Lunch-Crafted-McCafe-V2.zip - Chromium",
+					"hash": "628fcb080a6ec4686f7144041a737cf0",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "941",
+						"mm_height": "529",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c0003c ACTIVE HDMI1 03381-175 628fcb080a6ec4686f7144041a737cf0 - Lunch-Crafted-McCafe-V2.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "18",
+		"code": "03381-163",
+		"ip": "10.205.20.163",
+		"vpn_ip": "10.20.0.154",
+		"stamp": "2017-11-02T19:48:02.315Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "e1731b50-8931-11e7-8e22-dbf6f25b70b4",
+				"MAC Address": "f4:4d:30:6e:d4:17",
+				"Hostname": "03381-163",
+				"IP": "10.205.20.163",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.154",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:21.484-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:21.488Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "SYSKLi35.86A.0039.2016.0316.1747",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [],
+			"systemStatus": {
+				"Temperature": "53 c",
+				"CPU Usage": "22 %",
+				"Disk Usage": "5%",
+				"Memory Usage": "5 %",
+				"DB Records": "1783",
+				"DB Size": "79.69 MB",
+				"Log Size": "810.54 MB",
+				"Content Size": "972.51 MB",
+				"Ping": "20ms",
+				"Uptime": "29 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "1Tw0",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.30GHz", "Disk Size": "106G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "56", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "57",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Crew-facing Display / CFS 163 / Screen 1",
+					"Schedule": "Crew-facing Display Auto Recover (Quickset)",
+					"Content": "CFS.zip (14:10:00-16:10:00) Playing",
+					"Datasources": "CFS Settings.csv, CFS Prompts.csv",
+					"Screen Status": "N/A",
+					"Orientation": "normal"
+				},
+				{ "Id": "58", "Name": "HDMI2", "Status": "Disconnected", "Assignment": "Unassigned" }
+			],
+			"windows": {
+				"0x00c0003f": {
+					"id": "0x00c0003f",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-163 e09520c9e5b4d8799bd852961589479d - CFS.zip - Chromium",
+					"hash": "e09520c9e5b4d8799bd852961589479d",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "410",
+						"mm_height": "230",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c0003f ACTIVE HDMI1 03381-163 e09520c9e5b4d8799bd852961589479d - CFS.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "19",
+		"code": "03381-164",
+		"ip": "10.205.20.164",
+		"vpn_ip": "10.20.0.138",
+		"stamp": "2017-11-02T19:48:01.554Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "167be21e-8b67-11e7-a035-c355a71f744b",
+				"MAC Address": "f4:4d:30:6e:d5:78",
+				"Hostname": "03381-164",
+				"IP": "10.205.20.164",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.138",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:22.194-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:22.196Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "SYSKLi35.86A.0039.2016.0316.1747",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [],
+			"systemStatus": {
+				"Temperature": "59 c",
+				"CPU Usage": "23 %",
+				"Disk Usage": "5%",
+				"Memory Usage": "24 %",
+				"DB Records": "1600",
+				"DB Size": "79.69 MB",
+				"Log Size": "808.21 MB",
+				"Content Size": "973.60 MB",
+				"Ping": "15ms",
+				"Uptime": "35 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "3fn0",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.30GHz", "Disk Size": "106G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "59", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "60",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Crew-facing Display / CFS 164 / Screen 1",
+					"Schedule": "Crew-facing Display Auto Recover (Quickset)",
+					"Content": "CFS.zip (14:10:00-16:10:00) Playing",
+					"Datasources": "CFS Settings.csv, CFS Prompts.csv",
+					"Screen Status": "N/A",
+					"Orientation": "normal"
+				},
+				{ "Id": "61", "Name": "HDMI2", "Status": "Disconnected", "Assignment": "Unassigned" }
+			],
+			"windows": {
+				"0x00c00040": {
+					"id": "0x00c00040",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-164 6166cba83e098ba0f95e51fd35147edd - CFS.zip - Chromium",
+					"hash": "6166cba83e098ba0f95e51fd35147edd",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "410",
+						"mm_height": "230",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c00040 ACTIVE HDMI1 03381-164 6166cba83e098ba0f95e51fd35147edd - CFS.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "20",
+		"code": "03381-173",
+		"ip": "10.205.20.173",
+		"vpn_ip": "10.20.0.102",
+		"stamp": "2017-11-02T19:48:05.230Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "945b7af6-887d-11e7-9632-ff7e6beaa51c",
+				"MAC Address": "f4:4d:30:6e:e9:5f",
+				"Hostname": "03381-173",
+				"IP": "10.205.20.173",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.102",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:22.919-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:22.922Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "SYSKLi35.86A.0039.2016.0316.1747",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"input.enabled": "1",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"screen.input.HDMI1": "DVI",
+				"screen.model.HDMI1": "samsung",
+				"screen.power_status.HDMI1": "ON",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [
+				{ "code": "info.status", "stamp": "2017-11-01T15:01:11.091Z", "description": "Ok." },
+				{
+					"code": "error.play",
+					"stamp": "2017-11-01T14:58:12.043Z",
+					"description":
+						"Unable to play scheduled content! (    HDMI1 needs to play 0ba73380dc68921aa098afa7997e60fa - BF-BVM.zip,     need to close window 0x00c00001 ACTIVE HDMI1 03381-173 973227034824f467d0cf3ee7a4d8cf34 - BF-BVM.zip - Chromium, )"
+				}
+			],
+			"systemStatus": {
+				"Temperature": "43 c",
+				"CPU Usage": "5 %",
+				"Disk Usage": "19%",
+				"Memory Usage": "3 %",
+				"DB Records": "1602",
+				"DB Size": "79.69 MB",
+				"Log Size": "15.18 GB",
+				"Content Size": "963.02 MB",
+				"Ping": "16ms",
+				"Uptime": "47 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "oKX.",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.30GHz", "Disk Size": "106G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "62", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "63",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Romeoville Front Counter / Set 1 / Screen 3",
+					"Schedule": "30-08-17 Weekday (2017-08-30 01:30:00)",
+					"Content": "Lunch-Signature-EVM.zip (10:30:00-16:00:00) Playing",
+					"Datasources":
+						"nutrition_db.csv, Lunch-Signature-EVM-Options.csv, mcd-pos6.xml.csv, promo-playlist.csv, content-Settings.csv",
+					"Screen Config": "HDMI1 / 10.205.20.178 / SAMSUNG",
+					"Screen Status": "DVI / ON / samsung",
+					"Orientation": "normal"
+				},
+				{
+					"Id": "64",
+					"Name": "HDMI2",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Romeoville Front Counter / Set 2 / Screen 4",
+					"Schedule": "30-08-17 Weekday (2017-08-30 01:30:00)",
+					"Content": "Lunch-EVM-ADB.zip (10:30:00-16:00:00) Not Playing",
+					"Datasources":
+						"nutrition_db.csv, Lunch-EVM-ADB-Options.csv, mcd-pos6.xml.csv, promo-playlist.csv, content-Settings.csv",
+					"Screen Config": "HDMI2 / 10.205.20.179 / SAMSUNG",
+					"Screen Status": "N/A",
+					"Orientation": "normal",
+					"Backs up": "03381-174"
+				}
+			],
+			"windows": {
+				"0x00c0003c": {
+					"id": "0x00c0003c",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-173 9a3f0f9ea6070aefd9339052f647a43a - Lunch-Signature-EVM.zip - Chromium",
+					"hash": "9a3f0f9ea6070aefd9339052f647a43a",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "941",
+						"mm_height": "529",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c0003c ACTIVE HDMI1 03381-173 9a3f0f9ea6070aefd9339052f647a43a - Lunch-Signature-EVM.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "22",
+		"code": "03381-185",
+		"ip": "10.205.20.185",
+		"vpn_ip": "10.20.0.122",
+		"stamp": "2017-11-02T19:48:06.128Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "e628f10c-88e0-11e7-9124-573eb8bdf9d1",
+				"MAC Address": "94:c6:91:11:47:7d",
+				"Hostname": "03381-185",
+				"IP": "10.205.20.185",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.122",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:26.734-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:26.738Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "MYBDWi30.86A.0041.2017.0116.2158",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"screen.input.HDMI1": "HDMI1",
+				"screen.model.HDMI1": "samsung",
+				"screen.power_status.HDMI1": "ON",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [
+				{ "code": "info.status", "stamp": "2017-11-01T15:00:13.803Z", "description": "Ok." },
+				{
+					"code": "error.play",
+					"stamp": "2017-11-01T14:58:10.413Z",
+					"description": "Unable to play scheduled content! (Play is already running. Cannot Check., )"
+				}
+			],
+			"systemStatus": {
+				"Temperature": "43 c",
+				"CPU Usage": "3 %",
+				"Disk Usage": "36%",
+				"Memory Usage": "6 %",
+				"DB Records": "1599",
+				"DB Size": "27.26 MB",
+				"Log Size": "14.63 GB",
+				"Content Size": "926.67 MB",
+				"Ping": "9ms",
+				"Uptime": "44 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "ohP.",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.10GHz", "Disk Size": "51G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "69", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "70",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1080x1920",
+					"Assignment": "Romeoville Drive Thru / Lane 2 / Screen 2",
+					"Schedule": "Drive Thru 30 Aug Weekday (2017-08-30 01:30:00)",
+					"Content": "DT-Lunch-Screen1.zip (10:30:00-16:00:00) Playing",
+					"Datasources":
+						"DT-Lunch-Screen1-Options.csv, nutrition_db.csv, promo-playlist.csv, mcd-pos6.xml.csv, Suggestions.csv, content-Settings.csv",
+					"Screen Config": "HDMI1 / 10.205.20.188 / SAMSUNG",
+					"Screen Status": "HDMI1 / ON / samsung",
+					"Orientation": "left"
+				},
+				{ "Id": "71", "Name": "DP2", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "72",
+					"Name": "HDMI2",
+					"Status": "Connected",
+					"Screen Resolution": "1080x1920",
+					"Assignment": "Romeoville Drive Thru / Lane 2 Backup / Screen 3",
+					"Schedule": "Drive Thru 30 Aug Weekday (2017-08-30 01:30:00)",
+					"Content": "DT-Lunch-Screen2.zip (10:30:00-16:00:00) Not Playing",
+					"Datasources":
+						"DT-Lunch-Screen2-Options.csv, nutrition_db.csv, promo-playlist.csv, mcd-pos6.xml.csv, content-Settings.csv",
+					"Screen Config": "HDMI2 / 10.205.20.189 / SAMSUNG",
+					"Screen Status": "N/A",
+					"Orientation": "left",
+					"Backs up": "03381-186"
+				}
+			],
+			"windows": {
+				"0x00c0003c": {
+					"id": "0x00c0003c",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-185 5160de90b0427bdef97e1fefe085e97b - DT-Lunch-Screen1.zip - Chromium",
+					"hash": "5160de90b0427bdef97e1fefe085e97b",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "941",
+						"mm_height": "529",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c0003c ACTIVE HDMI1 03381-185 5160de90b0427bdef97e1fefe085e97b - DT-Lunch-Screen1.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "24",
+		"code": "03381-172",
+		"ip": "10.205.20.172",
+		"vpn_ip": "10.20.0.98",
+		"stamp": "2017-11-02T19:48:04.579Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "3de7b8b0-887d-11e7-a119-3f56e3af9df9",
+				"MAC Address": "f4:4d:30:6f:1f:25",
+				"Hostname": "03381-172",
+				"IP": "10.205.20.172",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.98",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:30.552-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:30.557Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "SYSKLi35.86A.0039.2016.0316.1747",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"screen.input.HDMI1": "DVI",
+				"screen.model.HDMI1": "samsung",
+				"screen.power_status.HDMI1": "ON",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [],
+			"systemStatus": {
+				"Temperature": "52 c",
+				"CPU Usage": "10 %",
+				"Disk Usage": "13%",
+				"Memory Usage": "2 %",
+				"DB Records": "1604",
+				"DB Size": "79.69 MB",
+				"Log Size": "9.51 GB",
+				"Content Size": "963.02 MB",
+				"Ping": "21ms",
+				"Uptime": "47 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "l4a1",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.30GHz", "Disk Size": "106G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "76", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "77",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Romeoville Front Counter / Set 1 / Screen 2",
+					"Schedule": "30-08-17 Weekday (2017-08-30 01:30:00)",
+					"Content": "Lunch-LTO-Playlist.zip (10:30:00-16:00:00) Playing",
+					"Datasources": "mcd-pos6.xml.csv, Lunch-LTO-Playlist.csv",
+					"Screen Config": "HDMI1 / 10.205.20.177 / SAMSUNG",
+					"Screen Status": "DVI / ON / samsung",
+					"Orientation": "normal"
+				},
+				{
+					"Id": "78",
+					"Name": "HDMI2",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Romeoville Front Counter / Set 2 / Screen 3",
+					"Schedule": "30-08-17 Weekday (2017-08-30 01:30:00)",
+					"Content": "Lunch-Signature-EVM.zip (10:30:00-16:00:00) Not Playing",
+					"Datasources":
+						"nutrition_db.csv, Lunch-Signature-EVM-Options.csv, mcd-pos6.xml.csv, promo-playlist.csv, content-Settings.csv",
+					"Screen Config": "HDMI2 / 10.205.20.178 / SAMSUNG",
+					"Screen Status": "N/A",
+					"Orientation": "normal",
+					"Backs up": "03381-173"
+				}
+			],
+			"windows": {
+				"0x00c0003c": {
+					"id": "0x00c0003c",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-172 68c46472b8ae801e2615475753df6355 - Lunch-LTO-Playlist.zip - Chromium",
+					"hash": "68c46472b8ae801e2615475753df6355",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "941",
+						"mm_height": "529",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c0003c ACTIVE HDMI1 03381-172 68c46472b8ae801e2615475753df6355 - Lunch-LTO-Playlist.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "26",
+		"code": "03381-186",
+		"ip": "10.205.20.186",
+		"vpn_ip": "10.20.0.126",
+		"stamp": "2017-11-02T19:48:05.380Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "854531c4-8904-11e7-8178-1fcac38da17e",
+				"MAC Address": "f4:4d:30:69:38:ec",
+				"Hostname": "03381-186",
+				"IP": "10.205.20.186",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.126",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:33.763-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:33.767Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "MYBDWi30.86A.0036.2016.0420.1451",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"screen.input.HDMI1": "HDMI1",
+				"screen.model.HDMI1": "samsung",
+				"screen.power_status.HDMI1": "ON",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [
+				{ "code": "info.status", "stamp": "2017-11-01T15:01:13.713Z", "description": "Ok." },
+				{
+					"code": "error.play",
+					"stamp": "2017-11-01T14:58:13.775Z",
+					"description": "Unable to play scheduled content! (Play is already running. Cannot Check., )"
+				}
+			],
+			"systemStatus": {
+				"Temperature": "48 c",
+				"CPU Usage": "1 %",
+				"Disk Usage": "36%",
+				"Memory Usage": "4 %",
+				"DB Records": "1514",
+				"DB Size": "27.26 MB",
+				"Log Size": "14.64 GB",
+				"Content Size": "926.67 MB",
+				"Ping": "10ms",
+				"Uptime": "44 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "3840",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.10GHz", "Disk Size": "51G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "83", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "84",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1080x1920",
+					"Assignment": "Romeoville Drive Thru / Lane 2 / Screen 3",
+					"Schedule": "Drive Thru 30 Aug Weekday (2017-08-30 01:30:00)",
+					"Content": "DT-Lunch-Screen2.zip (10:30:00-16:00:00) Playing",
+					"Datasources":
+						"DT-Lunch-Screen2-Options.csv, nutrition_db.csv, promo-playlist.csv, mcd-pos6.xml.csv, content-Settings.csv",
+					"Screen Config": "HDMI1 / 10.205.20.189 / SAMSUNG",
+					"Screen Status": "HDMI1 / ON / samsung",
+					"Orientation": "left"
+				},
+				{ "Id": "85", "Name": "DP2", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "86",
+					"Name": "HDMI2",
+					"Status": "Connected",
+					"Screen Resolution": "1080x1920",
+					"Assignment": "Romeoville Drive Thru / Lane 2 Backup / Screen 2",
+					"Schedule": "Drive Thru 30 Aug Weekday (2017-08-30 01:30:00)",
+					"Content": "DT-Lunch-Screen1.zip (10:30:00-16:00:00) Not Playing",
+					"Datasources":
+						"DT-Lunch-Screen1-Options.csv, nutrition_db.csv, promo-playlist.csv, mcd-pos6.xml.csv, Suggestions.csv, content-Settings.csv",
+					"Screen Config": "HDMI2 / 10.205.20.188 / SAMSUNG",
+					"Screen Status": "N/A",
+					"Orientation": "left",
+					"Backs up": "03381-185"
+				}
+			],
+			"windows": {
+				"0x00c0003c": {
+					"id": "0x00c0003c",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-186 e87a815f28476ee60e10ac1a66c746f3 - DT-Lunch-Screen2.zip - Chromium",
+					"hash": "e87a815f28476ee60e10ac1a66c746f3",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "941",
+						"mm_height": "529",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c0003c ACTIVE HDMI1 03381-186 e87a815f28476ee60e10ac1a66c746f3 - DT-Lunch-Screen2.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "27",
+		"code": "03381-181",
+		"ip": "10.205.20.181",
+		"vpn_ip": "10.20.0.142",
+		"stamp": "2017-11-02T19:48:03.872Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "ba134ee8-88ca-11e7-a5aa-1369037add81",
+				"MAC Address": "94:c6:91:11:3b:5f",
+				"Hostname": "03381-181",
+				"IP": "10.205.20.181",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.142",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:37.668-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:37.671Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "MYBDWi30.86A.0041.2017.0116.2158",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"input.enabled": "1",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"screen.input.HDMI1": "HDMI1",
+				"screen.model.HDMI1": "samsung",
+				"screen.power_status.HDMI1": "ON",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [],
+			"systemStatus": {
+				"Temperature": "38 c",
+				"CPU Usage": "4 %",
+				"Disk Usage": "25%",
+				"Memory Usage": "6 %",
+				"DB Records": "1599",
+				"DB Size": "27.26 MB",
+				"Log Size": "8.92 GB",
+				"Content Size": "926.67 MB",
+				"Ping": "9ms",
+				"Uptime": "47 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "TpQ.",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.10GHz", "Disk Size": "51G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "87", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "88",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1080x1920",
+					"Assignment": "Romeoville Drive Thru / Lane 1 / Screen 1",
+					"Schedule": "Drive Thru 30 Aug Weekday (2017-08-30 01:30:00)",
+					"Content": "DT-Lunch-Presell.zip (14:10:00-16:00:00) Playing",
+					"Datasources":
+						"DT-Lunch-Presell-Options.csv, nutrition_db.csv, promo-playlist.csv, mcd-pos6.xml.csv, content-Settings.csv",
+					"Screen Config": "HDMI1 / 10.205.20.167 / SAMSUNG",
+					"Screen Status": "HDMI1 / ON / samsung",
+					"Orientation": "left"
+				},
+				{ "Id": "89", "Name": "DP2", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{ "Id": "90", "Name": "HDMI2", "Status": "Disconnected", "Assignment": "Unassigned" }
+			],
+			"windows": {
+				"0x00c00040": {
+					"id": "0x00c00040",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-181 cfdd6208553b07dcb199c4126ffe3d15 - DT-Lunch-Presell.zip - Chromium",
+					"hash": "cfdd6208553b07dcb199c4126ffe3d15",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "941",
+						"mm_height": "529",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c00040 ACTIVE HDMI1 03381-181 cfdd6208553b07dcb199c4126ffe3d15 - DT-Lunch-Presell.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "40",
+		"code": "03381-162",
+		"ip": "10.205.20.162",
+		"vpn_ip": "10.20.0.134",
+		"stamp": "2017-11-02T19:48:07.451Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "1",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "499f5158-8905-11e7-9b16-9b129e64e35f",
+				"MAC Address": "f4:4d:30:6e:e9:0b",
+				"Hostname": "03381-162",
+				"IP": "10.205.20.162",
+				"Additional IPs": ["10.205.20.190"],
+				"VPN IP": "10.20.0.134",
+				"Role": "MASTER",
+				"Super Master": "TRUE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:40.110-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:40.113Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T06:01:31.306Z"
+			},
+			"state": {
+				"bios": "SYSKLi35.86A.0039.2016.0316.1747",
+				"config.disable-kiosk-mode": "OFF",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"input.enabled": "1",
+				"keepalived.state": "MASTER",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "34.206.12.229",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [],
+			"systemStatus": {
+				"Temperature": "53 c",
+				"CPU Usage": "21 %",
+				"Disk Usage": "6%",
+				"Memory Usage": "7 %",
+				"DB Records": "4559",
+				"DB Size": "79.69 MB",
+				"Log Size": "994.24 MB",
+				"Content Size": "972.54 MB",
+				"Ping": "155ms",
+				"Uptime": "35 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "online",
+				"Manufacturer": "NA",
+				"Password Changed": "nBE/",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.30GHz", "Disk Size": "106G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "138", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "139",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1920x1080",
+					"Assignment": "Crew-facing Display / CFS 162 / Screen 1",
+					"Schedule": "Crew-facing Display Auto Recover (Quickset)",
+					"Content": "CFS.zip (14:10:00-16:10:00) Playing",
+					"Datasources": "CFS Settings.csv, CFS Prompts.csv",
+					"Screen Status": "N/A",
+					"Orientation": "normal"
+				},
+				{ "Id": "140", "Name": "HDMI2", "Status": "Disconnected", "Assignment": "Unassigned" }
+			],
+			"windows": {
+				"0x00c00040": {
+					"id": "0x00c00040",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-162 55383f2ece8a6a4c599ee179e040eb1f - CFS.zip - Chromium",
+					"hash": "55383f2ece8a6a4c599ee179e040eb1f",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "410",
+						"mm_height": "230",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c00040 ACTIVE HDMI1 03381-162 55383f2ece8a6a4c599ee179e040eb1f - CFS.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "41",
+		"code": "03381-182",
+		"ip": "10.205.20.182",
+		"vpn_ip": "10.20.0.146",
+		"stamp": "2017-11-02T19:48:06.217Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "85142bc2-88cf-11e7-96dc-dba1d6a0367c",
+				"MAC Address": "94:c6:91:11:3d:50",
+				"Hostname": "03381-182",
+				"IP": "10.205.20.182",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.146",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:40.956-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:40.960Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "MYBDWi30.86A.0041.2017.0116.2158",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"screen.input.HDMI1": "HDMI1",
+				"screen.model.HDMI1": "samsung",
+				"screen.power_status.HDMI1": "ON",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [
+				{ "code": "info.status", "stamp": "2017-11-01T15:00:13.107Z", "description": "Ok." },
+				{
+					"code": "error.play",
+					"stamp": "2017-11-01T14:58:10.206Z",
+					"description": "Unable to play scheduled content! (Play is already running. Cannot Check., )"
+				}
+			],
+			"systemStatus": {
+				"Temperature": "42 c",
+				"CPU Usage": "4 %",
+				"Disk Usage": "36%",
+				"Memory Usage": "5 %",
+				"DB Records": "1599",
+				"DB Size": "27.26 MB",
+				"Log Size": "14.63 GB",
+				"Content Size": "926.67 MB",
+				"Ping": "9ms",
+				"Uptime": "44 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "0qk1",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.10GHz", "Disk Size": "51G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "141", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "142",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1080x1920",
+					"Assignment": "Romeoville Drive Thru / Lane 1 / Screen 2",
+					"Schedule": "Drive Thru 30 Aug Weekday (2017-08-30 01:30:00)",
+					"Content": "DT-Lunch-Screen1.zip (10:30:00-16:00:00) Playing",
+					"Datasources":
+						"DT-Lunch-Screen1-Options.csv, nutrition_db.csv, promo-playlist.csv, mcd-pos6.xml.csv, Suggestions.csv, content-Settings.csv",
+					"Screen Config": "HDMI1 / 10.205.20.168 / SAMSUNG",
+					"Screen Status": "HDMI1 / ON / samsung",
+					"Orientation": "left"
+				},
+				{ "Id": "143", "Name": "DP2", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "144",
+					"Name": "HDMI2",
+					"Status": "Connected",
+					"Screen Resolution": "1080x1920",
+					"Assignment": "Romeoville Drive Thru / Lane 1 Backup / Screen 3",
+					"Schedule": "Drive Thru 30 Aug Weekday (2017-08-30 01:30:00)",
+					"Content": "DT-Lunch-Screen2.zip (10:30:00-16:00:00) Not Playing",
+					"Datasources":
+						"DT-Lunch-Screen2-Options.csv, nutrition_db.csv, promo-playlist.csv, mcd-pos6.xml.csv, content-Settings.csv",
+					"Screen Config": "HDMI2 / 10.205.20.169 / SAMSUNG",
+					"Screen Status": "N/A",
+					"Orientation": "left",
+					"Backs up": "03381-183"
+				}
+			],
+			"windows": {
+				"0x00c0003c": {
+					"id": "0x00c0003c",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-182 f8cae3125a17ec946a2f5317745f7936 - DT-Lunch-Screen1.zip - Chromium",
+					"hash": "f8cae3125a17ec946a2f5317745f7936",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "941",
+						"mm_height": "529",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c0003c ACTIVE HDMI1 03381-182 f8cae3125a17ec946a2f5317745f7936 - DT-Lunch-Screen1.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "42",
+		"code": "03381-183",
+		"ip": "10.205.20.183",
+		"vpn_ip": "10.20.0.150",
+		"stamp": "2017-11-02T19:48:05.782Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "6759ec88-88da-11e7-a7fb-03a335184d88",
+				"MAC Address": "94:c6:91:11:4a:a8",
+				"Hostname": "03381-183",
+				"IP": "10.205.20.183",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.150",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:44.770-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:44.775Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "MYBDWi30.86A.0041.2017.0116.2158",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"input.enabled": "1",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"screen.input.HDMI1": "HDMI1",
+				"screen.model.HDMI1": "samsung",
+				"screen.power_status.HDMI1": "ON",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [
+				{ "code": "info.status", "stamp": "2017-11-01T15:00:13.036Z", "description": "Ok." },
+				{
+					"code": "error.play",
+					"stamp": "2017-11-01T14:58:09.768Z",
+					"description": "Unable to play scheduled content! (Play is already running. Cannot Check., )"
+				}
+			],
+			"systemStatus": {
+				"Temperature": "40 c",
+				"CPU Usage": "3 %",
+				"Disk Usage": "36%",
+				"Memory Usage": "5 %",
+				"DB Records": "1600",
+				"DB Size": "27.26 MB",
+				"Log Size": "14.64 GB",
+				"Content Size": "926.67 MB",
+				"Ping": "22ms",
+				"Uptime": "44 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "eTv.",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.10GHz", "Disk Size": "51G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "145", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "146",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1080x1920",
+					"Assignment": "Romeoville Drive Thru / Lane 1 / Screen 3",
+					"Schedule": "Drive Thru 30 Aug Weekday (2017-08-30 01:30:00)",
+					"Content": "DT-Lunch-Screen2.zip (10:30:00-16:00:00) Playing",
+					"Datasources":
+						"DT-Lunch-Screen2-Options.csv, nutrition_db.csv, promo-playlist.csv, mcd-pos6.xml.csv, content-Settings.csv",
+					"Screen Config": "HDMI1 / 10.205.20.169 / SAMSUNG",
+					"Screen Status": "HDMI1 / ON / samsung",
+					"Orientation": "left"
+				},
+				{ "Id": "147", "Name": "DP2", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "148",
+					"Name": "HDMI2",
+					"Status": "Connected",
+					"Screen Resolution": "1080x1920",
+					"Assignment": "Romeoville Drive Thru / Lane 1 Backup / Screen 2",
+					"Schedule": "Drive Thru 30 Aug Weekday (2017-08-30 01:30:00)",
+					"Content": "DT-Lunch-Screen1.zip (10:30:00-16:00:00) Not Playing",
+					"Datasources":
+						"DT-Lunch-Screen1-Options.csv, nutrition_db.csv, promo-playlist.csv, mcd-pos6.xml.csv, Suggestions.csv, content-Settings.csv",
+					"Screen Config": "HDMI2 / 10.205.20.168 / SAMSUNG",
+					"Screen Status": "N/A",
+					"Orientation": "left",
+					"Backs up": "03381-182"
+				}
+			],
+			"windows": {
+				"0x00c0003c": {
+					"id": "0x00c0003c",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-183 008a363d2c5ca98c11c4729c78a62fa9 - DT-Lunch-Screen2.zip - Chromium",
+					"hash": "008a363d2c5ca98c11c4729c78a62fa9",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "941",
+						"mm_height": "529",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c0003c ACTIVE HDMI1 03381-183 008a363d2c5ca98c11c4729c78a62fa9 - DT-Lunch-Screen2.zip - Chromium"
+				}
+			}
+		}
+	},
+	{
+		"id": "43",
+		"code": "03381-184",
+		"ip": "10.205.20.184",
+		"vpn_ip": "10.20.0.118",
+		"stamp": "2017-11-02T19:48:05.791Z",
+		"package_stamp": "2017-11-02T16:00:34.371Z",
+		"location_id": null,
+		"master": "0",
+		"online": "1",
+		"identifying": "0",
+		"download_remaining": "0",
+		"pos_file_status": true,
+		"status": {
+			"identity": {
+				"UUID": "bad2f586-88de-11e7-aac5-cf76567c4d00",
+				"MAC Address": "94:c6:91:11:3b:98",
+				"Hostname": "03381-184",
+				"IP": "10.205.20.184",
+				"Additional IPs": [],
+				"VPN IP": "10.20.0.118",
+				"Role": "SLAVE",
+				"Super Master": "FALSE",
+				"Location": "Romeoville"
+			},
+			"time": {
+				"Local Time": "2017-11-02T14:48:48.476-0500 (America/Chicago)",
+				"UTC": "2017-11-02T19:48:48.482Z"
+			},
+			"packages": {
+				"Applied HQ Package": "2017-11-02T06:01:31.306Z",
+				"Applied MP Package": "2017-11-02T16:00:34.371Z",
+				"Upstream Package": "2017-11-02T16:00:34.371Z"
+			},
+			"state": {
+				"bios": "MYBDWi30.86A.0041.2017.0116.2158",
+				"config.import-language": "en_US",
+				"config.lns.dt-content-port": "22599",
+				"config.lns.dt-pos-ports": "{\"dt1\":22500,\"dt2\":22501}",
+				"config.location-status":
+					"{\n  \"gen6\": {\n    \"bios\": [\"SYSKL\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  },\n  \"senaca\": {\n    \"bios\": [\"MYBDW\"],\n    \"primary\":\"HDMI1\",\n    \"secondary\":\"HDMI2\"\n  } \n}\n",
+				"config.master.pm2-services.json":
+					"{\n    \"apps\": [\n        {\n            \"name\": \"local-notification-server\",\n            \"script\": \"index.js\",\n            \"cwd\": \"/opt/local-notification-server\"\n        },\n        {\n            \"name\": \"suggestion-engine-service\",\n            \"script\": \"suggestion-engine-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-engine-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"ENGINE_NAME\": \"lastItem\",\n                \"ENGINE_DB_TYPE\": \"csv\",\n                \"ENGINE_DB_HEADER\": \"true\",\n                \"ENGINE_TABLE_SUGGESTION\": \"/var/lib/switchboard/content/Suggestive Sell Campaigns.csv\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.cod_client_order_view,switchboard.cod_client_refresh_state\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        },\n        {\n            \"name\": \"suggestion-beacon-service\",\n            \"script\": \"suggestion-beacon-service\",\n            \"watch\": false,\n            \"merge_logs\": true,\n            \"cwd\": \"/opt/suggestion-beacon-service\",\n            \"env\": {\n                \"NODE_ENV\": \"test\",\n                \"LMS_OUTPUT\": \"http://10.205.20.190:3333\",\n                \"LMS_INPUT\": \"http://10.205.20.190:22599\",\n                \"LMS_EVENTS\": \"notification,switchboard.suggestion\",\n                \"SUPERMASTER_CHECK\": \"true\",\n                \"SUPERMASTER_SH\": \"/usr/local/switchboard/shell/ip-address-super-master.sh\"\n            }\n        }\n    ]\n}",
+				"config.network.super-master": "{\"super-master\":\"10.205.20.190\"}",
+				"config.notifications.state": "ON",
+				"domain.name": "us.mcd.switchboardcms.com",
+				"environment": "local",
+				"keepalived.state": "SLAVE",
+				"location": "03381",
+				"network.hq": "34.206.12.229",
+				"network.master": "10.205.20.162",
+				"network.upstream": "10.205.20.162",
+				"screen.input.HDMI1": "HDMI1",
+				"screen.model.HDMI1": "samsung",
+				"screen.power_status.HDMI1": "ON",
+				"state": "1",
+				"version.application": "6.41.47",
+				"version.config": "49",
+				"version.db": "29"
+			},
+			"notifications": [
+				{ "code": "info.status", "stamp": "2017-11-01T15:00:13.397Z", "description": "Ok." },
+				{
+					"code": "error.play",
+					"stamp": "2017-11-01T14:58:10.264Z",
+					"description": "Unable to play scheduled content! (Play is already running. Cannot Check., )"
+				}
+			],
+			"systemStatus": {
+				"Temperature": "38 c",
+				"CPU Usage": "4 %",
+				"Disk Usage": "37%",
+				"Memory Usage": "5 %",
+				"DB Records": "1514",
+				"DB Size": "27.26 MB",
+				"Log Size": "14.81 GB",
+				"Content Size": "926.67 MB",
+				"Ping": "9ms",
+				"Uptime": "47 days",
+				"System Status": "ok",
+				"User": "ubuntu",
+				"Network Type": "Static",
+				"LMS Status": "stopped",
+				"Manufacturer": "NA",
+				"Password Changed": "3xj0",
+				"Keyboard Lock": "mcd-",
+				"Content Status": "Up to date"
+			},
+			"additionalInfo": { "Cpu Size": "4x2.10GHz", "Disk Size": "51G", "Memory Size": "3.7GB" },
+			"outputs": [
+				{ "Id": "149", "Name": "DP1", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "150",
+					"Name": "HDMI1",
+					"Status": "Connected",
+					"Screen Resolution": "1080x1920",
+					"Assignment": "Romeoville Drive Thru / Lane 2 / Screen 1",
+					"Schedule": "Drive Thru 30 Aug Weekday (2017-08-30 01:30:00)",
+					"Content": "DT-Lunch-Presell.zip (14:10:00-16:00:00) Playing",
+					"Datasources":
+						"DT-Lunch-Presell-Options.csv, nutrition_db.csv, promo-playlist.csv, mcd-pos6.xml.csv, content-Settings.csv",
+					"Screen Config": "HDMI1 / 10.205.20.187 / SAMSUNG",
+					"Screen Status": "HDMI1 / ON / samsung",
+					"Orientation": "left"
+				},
+				{ "Id": "151", "Name": "DP2", "Status": "Disconnected", "Assignment": "Unassigned" },
+				{
+					"Id": "152",
+					"Name": "HDMI2",
+					"Status": "Connected",
+					"Screen Resolution": "1080x1920",
+					"Assignment": "Romeoville Drive Thru / Lane 2 Backup / Screen 1",
+					"Schedule": "Drive Thru 30 Aug Weekday (2017-08-30 01:30:00)",
+					"Content": "DT-Lunch-Presell.zip (14:10:00-16:00:00) Not Playing",
+					"Datasources":
+						"DT-Lunch-Presell-Options.csv, nutrition_db.csv, promo-playlist.csv, mcd-pos6.xml.csv, content-Settings.csv",
+					"Screen Config": "HDMI2 / 10.205.20.187 / SAMSUNG",
+					"Screen Status": "N/A",
+					"Orientation": "left",
+					"Backs up": "03381-184"
+				}
+			],
+			"windows": {
+				"0x00c00040": {
+					"id": "0x00c00040",
+					"desktop": "0",
+					"x-offset": "0",
+					"y-offset": "0",
+					"width": "1920",
+					"height": "1080",
+					"title": "03381-184 6e39e89c4bb1c92f3f8ad1490f331ec1 - DT-Lunch-Presell.zip - Chromium",
+					"hash": "6e39e89c4bb1c92f3f8ad1490f331ec1",
+					"output": {
+						"name": "HDMI1",
+						"connected": true,
+						"mm_width": "941",
+						"mm_height": "529",
+						"pixel_width": "1920",
+						"pixel_height": "1080",
+						"x_offset": "0",
+						"y_offset": "0"
+					},
+					"desktopDescription": "ACTIVE",
+					"description":
+						"0x00c00040 ACTIVE HDMI1 03381-184 6e39e89c4bb1c92f3f8ad1490f331ec1 - DT-Lunch-Presell.zip - Chromium"
+				}
+			}
+		}
+	}
+]

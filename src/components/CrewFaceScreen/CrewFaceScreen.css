@@ -1,0 +1,40 @@
+.cfs-container {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.cfs-icon-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.cfs-title {
+  display: flex;
+  align-self: center;
+}
+
+.cfs-images-container {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+}
+
+.cfs-images {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.fa-money {
+  display: flex;
+  align-self: center;
+  margin-bottom: 10px;
+}
+.status-icon {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}

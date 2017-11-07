@@ -1,0 +1,21 @@
+.nav {
+  background-color: #212121;
+  width: 100%;
+  position: fixed;
+  height: 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  width: 85%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo {
+  width: 150px;
+  height: 36.8px;
+  margin-left: 
+}

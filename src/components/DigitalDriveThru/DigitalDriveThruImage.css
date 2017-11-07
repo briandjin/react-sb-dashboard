@@ -1,0 +1,17 @@
+.ddt-image-container {
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ddt-image {
+  border-radius: 5px;
+}
+
+.ddt-btn {
+  width: 75px;
+  height: 25px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
