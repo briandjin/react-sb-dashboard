@@ -1,11 +1,12 @@
-import React, { Component } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import Header from "./components/Header/Header";
-import FrontCounter from "./components/FrontCounter/FrontCounter";
-import DigitalDriveThru from "./components/DigitalDriveThru/DigitalDriveThru";
-import CrewFaceScreen from "./components/CrewFaceScreen/CrewFaceScreen";
-import "./App.css";
-// import data from "./data.json";
+import React, { Component } from 'react';
+// Custom Components
+import Navbar from './components/Navbar/Navbar';
+import Header from './components/Header/Header';
+import FrontCounter from './components/FrontCounter/FrontCounter';
+import DigitalDriveThru from './components/DigitalDriveThru/DigitalDriveThru';
+import CrewFaceScreen from './components/CrewFaceScreen/CrewFaceScreen';
+// Css
+import './App.css';
 
 class App extends Component {
   render() {

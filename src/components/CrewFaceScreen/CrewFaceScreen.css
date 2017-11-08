@@ -25,7 +25,8 @@
 .cfs-images {
   display: flex;
   flex: 1;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .fa-money {

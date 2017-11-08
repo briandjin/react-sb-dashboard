@@ -22,12 +22,6 @@
   justify-content: center;
 }
 
-.ddt-images {
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-}
-
 .fa-car {
   display: flex;
   align-self: center;
@@ -38,4 +32,20 @@
   display: flex;
   flex: 1;
   justify-content: center;
+}
+
+.ddt-lanes-container {
+  display: flex;
+  flex: 2;
+}
+
+.ddt-lanes {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.ddt-lane {
+  display: flex;
 }

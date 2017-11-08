@@ -4,7 +4,7 @@
 
 .background-image {
 	background-image: linear-gradient(rgba(33, 33, 33, 0.75), rgba(33, 33, 33, 0.75)),
-		url("../../images/dashboard-bg.jpg");
+		url('../../images/dashboard-bg.jpg');
 	background-size: cover;
 	width: 100%;
 	height: 500px;
@@ -19,10 +19,10 @@
 .title {
 	color: white;
 	margin-bottom: 30px;
-	/*font-family: "weblysleek", sans-serif;*/
+	font-size: 2.5rem;
 }
 
 .subtitle {
 	color: white;
-	/*font-family: "weblysleek", sans-serif;*/
+	font-size: 1.5rem;
 }

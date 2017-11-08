@@ -7,6 +7,8 @@
 
 .cfs-image {
   border-radius: 5px;
+  width: 150px;
+  height: 85px;
 }
 
 .cfs-btn {
